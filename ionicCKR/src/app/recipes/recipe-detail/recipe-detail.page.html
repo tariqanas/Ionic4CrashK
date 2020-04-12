@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="recipes"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{loadedRecip.title}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-grid no-padding>
+  <ion-row><ion-col no-padding><img [src]='loadedRecip.image'></ion-col></ion-row>
+  <ion-row><ion-col><h1 textcenter>{{loadedRecip.title}}</h1></ion-col></ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-list>
+        <ion-item *ngFor="let ing of loadedRecip.ingredient">{{ing}}</ion-item>
+      </ion-list>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+</ion-content>

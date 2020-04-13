@@ -36,4 +36,12 @@ export class RecipesService {
       return recip.id === recipId;
     });
   }
+
+  public deleteRecip(recipId : string) {
+    for ( let recip  of this.recipes) {
+      if ( recip.id === recipId) {
+        this.recipes.splice(this.recipes.indexOf(recip),1);
+      }
+    }
+  }
 }
